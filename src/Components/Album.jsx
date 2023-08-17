@@ -1,31 +1,31 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Doggie from "../assets/imgs/Doggie.png";
 import "../Components/Album.css";
 
 function Album({photo,petName,petDescription,breed,age,petType}) {
 
-    function colorHandler(petType){
-        let colorType = ""
+    
+  function colorHandler(petType){
+    let colorType = ""
 
-        if(petType === "Turtle"){
-          colorType = "primary"
-        } else if (petType === "Dog") {
-          colorType = "success"
-        }  else if (petType === "Cat") {
-          colorType = "warning"
-        }  else if (petType === "Bird") {
-          colorType = "danger"
-        }  else{
-          colorType = "info"
-        }
-      
-        return colorType; 
-      }
+    if(petType === "Turtle"){
+      colorType = "primary"
+    } else if (petType === "Dog") {
+      colorType = "success"
+    }  else if (petType === "Cat") {
+      colorType = "warning"
+    }  else if (petType === "Bird") {
+      colorType = "danger"
+    }  else{
+      colorType = "info"
+    }
+  
+    return colorType; 
+  }
 
-    const tagColor = colorHandler(petType);
-    console.log(tagColor)
-    console.log(petType)
+const tagColor = colorHandler(petType);
+console.log(tagColor)
+console.log(petType)
 
     return (
         <>
@@ -36,7 +36,7 @@ function Album({photo,petName,petDescription,breed,age,petType}) {
                             <p className="card-text description">{petDescription}</p>
                             <p className="card-text breed">{breed}</p>
                             <p className="card-text age">{age}</p>
-                            <button className={`btn btn-${tagColor}`}>{petType}</button>
+                            <button className={`btn btn-${tagColor}`}>{petType}</button>                             
                         </div>
                     </div>
         </>
