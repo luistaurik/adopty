@@ -1,0 +1,15 @@
+.footer {
+    padding: 2.5rem 5rem;
+    height: 500px;
+}
+
+.social-media {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-acount {
+    padding: 10px 1rem;
+    font-size: 36px;
+}
